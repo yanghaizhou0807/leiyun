@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/touming"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/details_coupon_cartridge_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="优惠券"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领取优惠券"
+            android:textSize="11sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:textColor="#666666"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/coupon_background"
+            android:orientation="horizontal"
+            android:layout_marginLeft="21dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:text="￥"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textSize="40sp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="满999元可用"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="限购运动类商品使用"
+                    android:textSize="13sp"
+                    android:textColor="@color/wuse"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                    <Button
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="76dp"
+                        android:layout_height="21dp"
+                        android:layout_marginRight="10dp"
+                        android:text="点击领取"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_fill_details"/>
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期：2019.04.01-2019.09.21"
+                    android:textSize="11sp"
+                    android:textColor="@color/wuse"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/coupon_background"
+            android:orientation="horizontal"
+            android:layout_marginLeft="21dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:text="￥"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textSize="40sp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="满999元可用"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="限购运动类商品使用"
+                    android:textSize="13sp"
+                    android:textColor="@color/wuse"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                    <Button
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="76dp"
+                        android:layout_height="21dp"
+                        android:layout_marginRight="10dp"
+                        android:text="点击领取"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_fill_details"/>
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期：2019.04.01-2019.09.21"
+                    android:textSize="11sp"
+                    android:textColor="@color/wuse"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yelllowd"
+            android:text="完   成"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

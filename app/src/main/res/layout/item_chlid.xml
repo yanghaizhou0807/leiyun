@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_child"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="6dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    >
+
+    <CheckBox
+        android:id="@+id/cb_child"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/checkbox_payment"
+        android:button="@android:color/transparent"/>
+
+    <ImageView
+        android:id="@+id/item_chlid_image"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/logo"
+        android:layout_marginLeft="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/wuse"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/item_chlid_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="¥ 88.00"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/yelllowd"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="2dp">
+
+                <Button
+                    android:id="@+id/item_chlid_close"
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="-" />
+
+                <View
+                    android:layout_width="0.5sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/item_chlid_num"
+                    android:layout_width="28dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="0.5sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/item_chlid_add"
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="+" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LeiYun_IC</string>
+    <string name="load_data_str">加载数据中，请稍候...</string>
+    <string name="telephone_strg">请输入正确的手机号码!</string>
+    <string name="input_telephone_strg">请输入手机号!</string>
+    <string name="input_pwd_strg">请输入密码!</string>
+    <string name="pwd_descri_strg">密码由6-20位英文字母或数字组成</string>
+</resources>

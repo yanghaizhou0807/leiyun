@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sli"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F4F3F8"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="22pt"
+        android:background="@mipmap/top_yellow_s"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <com.example.admin.leiyun_ic.views.CircleImageView
+            android:id="@+id/iv_user_icon"
+            android:layout_width="17pt"
+            android:layout_height="17pt"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="8pt"
+            android:src="@mipmap/tou_xiang_s" />
+
+        <!--<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_user_icon">-->
+
+            <Button
+                android:id="@+id/scan_btn"
+                android:layout_width="9pt"
+                android:layout_height="9pt"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/iv_user_icon"
+                android:layout_marginLeft="7pt"
+                android:background="@mipmap/scanning_button_bg"/>
+
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="10pt"
+                android:layout_height="10pt"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/scan_btn"
+                android:layout_marginLeft="7pt"
+                android:background="@mipmap/search_button_bg"/>
+
+            <Button
+                android:layout_width="11pt"
+                android:layout_height="10pt"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8pt"
+                android:background="@mipmap/message_button_bg"/>
+
+      <!--  </RelativeLayout>-->
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F3F8">
+
+    <LinearLayout
+        android:id="@+id/title_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#F4F3F8"
+        android:orientation="vertical">
+        <!-- -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="#4d000000"/>
+
+        <RelativeLayout
+            android:id="@+id/mail_list_rlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="#F4F3F8"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/charge_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="关于福利购"
+                android:textColor="@color/wuse"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="9dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/left" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/message_button_bg"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:background="@mipmap/logo"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/title_llyt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="喜欢我们，打分鼓励一下吧"
+            android:textSize="12sp"
+            android:textColor="@color/wuse"
+            android:layout_marginLeft="15dp"
+            />
+        <Button
+            android:id="@+id/interest_management_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textSize="12sp"
+            android:background="@mipmap/jiantou_fx" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22pt"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/scan_btn_s"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/scanning_button_new"/>
+            <TextView
+                android:layout_marginTop="@dimen/x5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="扫一扫"
+                android:textSize="@dimen/x17"
+                android:textColor="@color/yelllows"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@mipmap/search_box_yellow">
+
+            <EditText
+                android:id="@+id/charge_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:hint="小鹿要飞 2019 春季新款"
+                android:textSize="11sp"
+                android:background="@drawable/white_fill_bg"
+                />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/search_button_new"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/scan_btn_s11111"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/message_button_new"/>
+            <TextView
+                android:layout_marginTop="@dimen/x5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消  息"
+                android:layout_gravity="center"
+                android:textSize="@dimen/x17"
+                android:textColor="@color/yelllows"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="#4d000000" />
+
+        <RelativeLayout
+            android:id="@+id/mail_list_rlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/charge_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="新品首发"
+                android:textColor="@color/wuse"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="10dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/left" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/gray_search" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_bottom_grey_line"
+            android:orientation="horizontal">
+            <com.example.admin.leiyun_ic.HomePage.model.SlideTabView
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/aaa"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fafafa"/>
+
+    <Button
+        android:id="@+id/danru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_charge_llyt"
+        android:background="@color/yelllows"
+        android:gravity="center_vertical"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/phone_charge_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/charge_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="新品首发"
+            android:textColor="@color/wuse"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/left"
+            />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/gray_search"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

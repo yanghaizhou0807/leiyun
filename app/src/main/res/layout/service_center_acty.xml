@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F3F8">
+
+    <LinearLayout
+        android:id="@+id/title_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!-- -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="#4d000000"/>
+
+        <RelativeLayout
+            android:id="@+id/mail_list_rlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/charge_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="客服中心"
+                android:textColor="@color/wuse"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="9dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/left" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/message_button_bg"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="21dp"
+            android:background="@mipmap/count_service_icon"/>
+
+        <TextView
+            android:layout_width="167dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:text="HI,亲爱的用户!请问有什么帮助你的"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/kefu_bg"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客服热线"
+        android:textColor="@color/wuse"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/phone_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/phone_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/phone_1"
+            android:layout_marginLeft="9dp"
+            android:text="京东商城"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/phone_1"
+            android:layout_marginLeft="9dp"
+            android:text="400-6066866"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/phone_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/phone_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/phone_2"
+            android:layout_marginLeft="9dp"
+            android:text="苏宁易购"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/phone_2"
+            android:layout_marginLeft="9dp"
+            android:text="400-8516516"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/phone_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/phone_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/phone_3"
+            android:layout_marginLeft="9dp"
+            android:text="办公伙伴"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/phone_3"
+            android:layout_marginLeft="9dp"
+            android:text="400-678-8616"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/phone_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/phone_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/phone_4"
+            android:layout_marginLeft="9dp"
+            android:text="企事通"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/phone_4"
+            android:layout_marginLeft="9dp"
+            android:text="0571-86811037"
+            android:textSize="13sp"
+            android:textColor="#111111"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

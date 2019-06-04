@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="138dp"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dailog_my_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="退出当前账号"
+        android:textColor="@color/black_color"
+        android:textSize="20dp"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/dailog_my_content"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="确定退出登录吗？"
+            android:textColor="@color/black_color"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/dailog_my_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/white_black_bg"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/black_color"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/dailog_my_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dailog_my_cancel"
+                android:layout_weight="1"
+                android:background="@color/yelllowd"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

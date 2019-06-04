@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:divider="@drawable/ll_divider_height_one_px"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_toRightOf="@id/item_goods_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textSize="14sp"
+                android:textColor="@color/wuse"
+                tools:text="福利商城自营店铺" />
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="2019.05.17 11:11:11"
+                android:textSize="11sp"
+                android:textColor="@color/six"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/intm_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+100.00"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#222222"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

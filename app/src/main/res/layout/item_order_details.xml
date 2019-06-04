@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginBottom="9dp"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/order_store"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginLeft="7dp"
+            android:text="韩后花痴氨基酸"
+            android:textSize="11sp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_goods_img"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/phone_test"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_toRightOf="@id/item_goods_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_goods_name"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:textSize="11sp"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:text="左右为男进退两男强人锁男勉为骑男" />
+
+            <TextView
+                android:id="@+id/item_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="50G"
+                android:textSize="11sp"
+                android:background="#f5f5f5"
+                android:textColor="@color/six"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/yelllowd"
+                    android:text="￥153.00"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

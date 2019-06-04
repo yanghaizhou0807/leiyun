@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="275dp"
+        android:layout_height="254dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:background="@mipmap/start_bg" />
+
+    <TextView
+        android:id="@+id/www"
+        android:layout_below="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="阳光福利商城"
+        android:textColor="#fe6601"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/mmm"
+        android:layout_below="@+id/www"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="品质保障 购物无忧 精品优选 极速送达"
+        android:textColor="#fe6601"
+        android:textSize="16sp"/>
+    <!-- <Button
+         android:id="@+id/btn_click"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="点击"/>
+ -->
+
+    <Button
+        android:layout_below="@+id/mmm"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="45dp"
+        android:background="@mipmap/immediate_experience_bg"
+        android:text="立即体验"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+
+</RelativeLayout>

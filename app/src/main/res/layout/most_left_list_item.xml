@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    android:elevation="3dip"
+    >
+
+    <TextView
+        android:text="凯迪拉克"
+        android:id="@+id/most_left_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="6dp"/>
+</FrameLayout>

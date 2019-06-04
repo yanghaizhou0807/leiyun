@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.leiyun_ic">
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 访问互联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:name=".Base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".NavigationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.admin.leiyun_ic.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.admin.leiyun_ic.testActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.Search.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.HomePageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.MyMallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.ShoppingCart.ShoppingCartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.ClassIfication.ClassIficationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.FirstEpisodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.WelfareMallLevelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.FreshSelectionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.IntegralSuperiorityActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.LaborActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.LimitedTimeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.OfficeGoodActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.ParentChildActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.Details.CommodityDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.admin.leiyun_ic.Details.ViewDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.AllOrdersActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.Details.OrderDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.Details.CashierActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.Details.ModifyAddressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.Details.AddAddressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.AccountSettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.AccountSecurityActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.InterestManagementActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.AboutWelfarePurchaseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.FeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.ArrivalNoticeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.CustomerServiceCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.MyTracksActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.MessageCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.AfterSaleRefundActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.BalanceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.VoucherCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.SuccessfulPaymentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.AvailableIntegralActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.MyMall.CouponActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.example.admin.leiyun_ic.HomePage.BrandExclusiveActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+    </application>
+
+</manifest>

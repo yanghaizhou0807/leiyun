@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F3F8">
+
+    <LinearLayout
+        android:id="@+id/title_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!-- -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22pt"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/scan_btn_s"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/scanning_button_new"/>
+                <TextView
+                    android:layout_marginTop="@dimen/x5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="扫一扫"
+                    android:textSize="@dimen/x17"
+                    android:textColor="@color/yelllows"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@mipmap/search_box_yellow">
+
+                <EditText
+                    android:id="@+id/charge_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:hint="小鹿要飞 2019 春季新款"
+                    android:textSize="11sp"
+                    android:background="@drawable/white_fill_bg"
+                    />
+
+                <Button
+                    android:id="@+id/search_btn"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@mipmap/search_button_new"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/scan_btn_s11111"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/message_button_new"/>
+                <TextView
+                    android:layout_marginTop="@dimen/x5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消  息"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/x17"
+                    android:textColor="@color/yelllows"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F3F8"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/left_list"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+        <com.example.admin.leiyun_ic.ClassIfication.SpringsScrollewView
+            android:id="@+id/root_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <RelativeLayout
+                android:id="@+id/service_slide_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/service_right_banner_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@mipmap/banner_bgt" />
+
+                <LinearLayout
+                    android:id="@+id/tttt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/service_right_banner_img"
+                    android:gravity="center|center_horizontal">
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@color/gray_color" />
+
+                    <TextView
+                        android:id="@+id/service_right_adapter_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:text="热门推荐"
+                        android:textColor="@color/wuse"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_color" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/right_list"
+                    android:layout_below="@id/tttt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:scrollbars="none"
+                    android:background="@color/white"/>
+            </RelativeLayout>
+        </com.example.admin.leiyun_ic.ClassIfication.SpringsScrollewView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1ca0eb</color>
+    <color name="colorPrimaryDark">#1ca0eb</color>
+    <color name="colorAccent">#1ca0eb</color>
+    <color name="white_color">#ffffff</color>
+    <!--<color name="black_color">#343434</color>-->
+    <color name="black_color">#333333</color>
+    <color name="gray_color">#DCDCDC</color>
+    <color name="dark_color">#A9A9A9</color>
+    <color name="red_color">#FF0000</color>
+    <color name="title_color">#0090ff</color>
+    <color name="light_red_color">#e60012</color>
+    <color name="lighter_red_color">#ed5061</color>
+    <!--<color name="light_blue_color">#0090ff</color>-->
+    <color name="light_blue_color">#F20B0B</color>
+    <color name="bg_color">#eeeceb</color>
+    <color name="bg_blue_color">#1ca0eb</color>
+    <color name="ligth_orange_color">#eda57b</color>
+    <color name="orange_color">#FFA500</color>
+    <color name="test">#444444</color>
+
+    <color name="sss">#00FFFFFF</color>
+    <color name="ninenine">#999999</color>
+
+    <color name="fafafa">#fafafa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="zero">#00000000</color>
+    <color name="wuse">#333333</color>
+    <color name="six">#666666</color>
+    <color name="touming">#e0000000</color>
+    <color name="yelllowd">#fe6601</color>
+    <color name="yelllows">#fe9901</color>
+    <color name="tab_title_normal_color">#dfe0e0</color>
+    <color name="tab_title_pressed_color">#21aae0</color>
+    <color name="tab_middle_line_color">#5c882c</color>
+    <color name="hui_se">#f5f5f9</color>
+    <color name="btn_text_hover">#CCFFFFFF</color>
+    <color name="tab_unselect">#a3a3a3</color>
+    <color name="news_tv_source_color">#a3a3a3</color>
+    <color name="statusBar">#BDBDBD</color>
+    <color name="tvUrlColor">#3c3c3c</color>
+
+    <!-- 深灰色，外部线条（顶边） -->
+    <color name="divider_grey">#eeeeee</color>
+    <!-- 浅灰色，内部线条（与边缘有间距） -->
+
+    <color name="text_label_color">#4a4a4a</color>
+    <color name="transparent">#00000000</color><!-- 透明色 -->
+
+</resources>

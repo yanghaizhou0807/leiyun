@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:state_pressed="true" android:drawable="@drawable/play_button"></item>
+    <item android:state_focused="true" android:drawable="@drawable/play_button"></item>
+    <item android:drawable="@drawable/button"></item>-->
+    <solid android:color="@color/yelllowd" />
+    <corners android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:bottomRightRadius="20dp"
+        android:bottomLeftRadius="20dp"/>
+    <stroke android:width="0dp" android:color="#F4F3F8" />
+
+</shape>

@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<RelativeLayout
+        android:id="@+id/phone_charge_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/charge_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="福利商城"
+            android:textColor="@color/wuse"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/left"
+            />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/gray_search"
+            />
+    </RelativeLayout>-->
+
+
+    <ScrollView
+        android:id="@+id/welfare_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_background"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--切换fragment-->
+            <LinearLayout
+                android:id="@+id/llyt_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <fragment
+                    android:id="@+id/frame_layout"
+                    android:name="com.example.admin.leiyun_ic.views.CycleViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="189dp" />
+
+
+            </LinearLayout>
+            <!--数码电器-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F3F8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/vertical_line_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:text="数码电器"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/jiantou"
+                            android:text="DIGTAL HOME APPLIANCES"
+                            android:textColor="#1812eb"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--  广告home1 -->
+                <ImageView
+                    android:id="@+id/banner_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/banner_bg"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#F4F3F8"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/white"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--办公用品-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F3F8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/vertical_line_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:text="办公用品"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/jiantou"
+                            android:text="OFFICE SUPPLIES"
+                            android:textColor="#127DEB"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--  广告home1 -->
+                <ImageView
+                    android:id="@+id/banner_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/banner_bg"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#F4F3F8"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/white"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--劳保专区-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F3F8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/vertical_line_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:text="劳保专区"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/jiantou"
+                            android:text="LABOP INSURANCE AREA"
+                            android:textColor="#e6ca0c"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--  广告home1 -->
+                <ImageView
+                    android:id="@+id/banner_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/banner_bg"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#F4F3F8"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/white"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--食品生鲜-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F3F8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/vertical_line_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:text="食品生鲜"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/jiantou"
+                            android:text="FRESH FOOD"
+                            android:textColor="#00d24a"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--  广告home1 -->
+                <ImageView
+                    android:id="@+id/banner_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/banner_bg"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#F4F3F8"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/white"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/home3_12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@mipmap/icon_more_benefits" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:text="可裸睡纯棉便携睡袋"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/wuse"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="@color/yelllowd"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥346.32"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#999999"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 猜你喜欢标题-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/ellipse_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="猜你喜欢"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/ellipse_right" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--标题栏-->
+    <LinearLayout
+        android:id="@+id/headerParent_welfare"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#00FFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/scan_btn_s"
+                    android:layout_width="9dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/left" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/search_box_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/charge_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/white_fill_bg"
+                    android:hint="小鹿要飞 2019 春季新款"
+                    android:text=""
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/search_btn"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@mipmap/search_button_new" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/scan_btn_s11111"
+                    android:layout_width="23dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/center_msg_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x5"
+                    android:text="消  息"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x17" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
