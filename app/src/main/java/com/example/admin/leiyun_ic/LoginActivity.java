@@ -123,7 +123,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     @Override
                     public void onResponse(String s, int i) {
                         ProgressDialogManager.getInstance().dissmiss();
-                        Log.d("success-->>>", s);
+                        Log.d("response-22-->>>", s);
                         userLoginBean = GsonQuick.toObject(s, UserLoginBean.class);
                         BaseApplication.getInstance().setUserVO(userLoginBean);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);

@@ -66,7 +66,7 @@ public class NavigationActivity extends BaseActivity {
             @Override
             public void onResponse(String s, int i) {
                 //   ProgressDialogManager.getInstance().dissmiss();
-                Logger.d("response--->>:" + s);
+                Logger.d("response-22-->>:" + s);
                 if (!"".equals(s)) {
                     navigationBean = GsonQuick.toObject(s, NavigationBean.class);
                     if("操作成功".equals(navigationBean.getMsg())){

@@ -130,6 +130,8 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
         userLoginBean = BaseApplication.getInstance().getUserVO();
         if (!"".equals(userLoginBean) && null != userLoginBean) {
             nickname = userLoginBean.getData().getNickname();
+            device_id = userLoginBean.getData().getDevice_id();
+            user_token = userLoginBean.getData().getUser_token();
             Logger.e("nickname--->>:" + nickname);
         }
         if (!"".equals(nickname) && null != nickname) {
@@ -157,8 +159,8 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
         GetBuilder builders = OkHttpUtils.get();
         //builder.addParams("method", "wap_home.special");
         //map.put("method", "wap_home.wap_nav");
-        builders.addParams("device_id", "70468f8cf496b15a");
-        builders.addParams("user_token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKV1QiLCJpYXQiOjE1NTk1NDgyNDUsImV4cCI6MzExOTA5NjQ5MCwiYXVkIjoiYXBpQmFzZSIsInN1YiI6IjExMTFhcGlCYXNlIiwiZGF0YSI6eyJkZXZpY2VfaWQiOiI3MDQ2OGY4Y2Y0OTZiMTVhIn19.6J3Q9XzrvqRIcxOW5phCTqcEUfazYXlXYZBDlLK2JVQ");
+        builders.addParams("device_id", device_id);
+        builders.addParams("user_token", user_token);
         builders.url(BaseUrl.iconUrl).build().execute(new StringCallback() {
             @Override
             public void onError(Call call, Exception e, int i) {
@@ -167,10 +169,10 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
 
             @Override
             public void onResponse(String s, int i) {
-                Logger.d("response2--->>:" + s);
+                Logger.d("response-icon接口-->>:" + s);
                 if (!"".equals(s)) {
                     homepageNagtBean = GsonQuick.toObject(s, NewHomepageNagtBean.class);
-                    if ("请求成功".equals(homeEntityBean.getMsg())) {
+                    if ("请求成功".equals(homepageNagtBean.getMsg())) {
                         if (!"".equals(homepageNagtBean.getData().get(0).getNav_pic())) {
                             Glide.with(context).load(url + homepageNagtBean.getData().get(0).getNav_pic()).into(icon_1);
                             icon_tv1.setText(homepageNagtBean.getData().get(0).getNav_name());
@@ -216,9 +218,8 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
     private void HomeStartInterface() {
         GetBuilder builder = OkHttpUtils.get();
         //builder.addParams("method", "wap_home.special");
-        builder.addParams("device_id", "70468f8cf496b15a");
-        //builder.addParams("debug", "1");
-        builder.addParams("user_token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKV1QiLCJpYXQiOjE1NTk1NDgyNDUsImV4cCI6MzExOTA5NjQ5MCwiYXVkIjoiYXBpQmFzZSIsInN1YiI6IjExMTFhcGlCYXNlIiwiZGF0YSI6eyJkZXZpY2VfaWQiOiI3MDQ2OGY4Y2Y0OTZiMTVhIn19.6J3Q9XzrvqRIcxOW5phCTqcEUfazYXlXYZBDlLK2JVQ");
+        builder.addParams("device_id", device_id);
+        builder.addParams("user_token", user_token);
         builder.url(BaseUrl.baseUrl).build().execute(new StringCallback() {
             @Override
             public void onError(Call call, Exception e, int i) {
@@ -228,7 +229,7 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
             @Override
             public void onResponse(String s, int i) {
                 //   ProgressDialogManager.getInstance().dissmiss();
-                Logger.d("response1--->>:" + s);
+                Logger.d("response-22--楼层>>:" + s);
                 if (!"".equals(s)) {
                     homeEntityBean = GsonQuick.toObject(s, NewHomeEntityBean.class);
                     // 1 banner
@@ -503,8 +504,8 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
         //ProgressDialogManager.getInstance().showWait(this, "正在加载...");
         GetBuilder builderss = OkHttpUtils.get();
         //builder.addParams("method", "wap_home.product_list");
-        builderss.addParams("device_id", "70468f8cf496b15a");
-        builderss.addParams("user_token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKV1QiLCJpYXQiOjE1NTk1NDgyNDUsImV4cCI6MzExOTA5NjQ5MCwiYXVkIjoiYXBpQmFzZSIsInN1YiI6IjExMTFhcGlCYXNlIiwiZGF0YSI6eyJkZXZpY2VfaWQiOiI3MDQ2OGY4Y2Y0OTZiMTVhIn19.6J3Q9XzrvqRIcxOW5phCTqcEUfazYXlXYZBDlLK2JVQ");
+        builderss.addParams("device_id", device_id);
+        builderss.addParams("user_token", user_token);
         builderss.url(BaseUrl.recyclerViewUrl).build().execute(new StringCallback() {
             @Override
             public void onError(Call call, Exception e, int i) {
@@ -514,10 +515,10 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
             @Override
             public void onResponse(String s, int i) {
                 // ProgressDialogManager.getInstance().dissmiss();
-                Logger.d("response3---rv>>:" + s);
+                Logger.d("response-22--猜你喜欢>>:" + s);
                 if (!"".equals(s)) {
                     homeRecycleViewBean = GsonQuick.toObject(s, NewHomeRecycleViewBean.class);
-                    if ("请求成功".equals(homeEntityBean.getMsg())) {
+                    if ("请求成功".equals(homeRecycleViewBean.getMsg())) {
                         if (homeRecycleViewBean.getData().getList().size() >= 1) {
                             list = homeRecycleViewBean.getData().getList();
                             allList.addAll(list);

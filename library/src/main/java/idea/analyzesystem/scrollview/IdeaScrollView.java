@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class IdeaScrollView extends ScrollView {
 
     private final Point point;
     private IdeaViewPager viewPager;
+    private ImageView imageView;
 
     private int position = 0;
 

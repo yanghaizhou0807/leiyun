@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10">
+
+
+            <com.example.admin.leiyun_ic.views.CircleImageView
+                android:id="@+id/iv_user_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerCrop"
+                 />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/iv_user_icon"
+                android:text="雨女无瓜"
+                android:layout_alignTop="@+id/iv_user_icon"
+                android:textColor="@color/wuse"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_upload_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/iv_user_icon"
+                android:text="2018-04-10"
+                android:layout_alignBottom="@+id/iv_user_icon"
+                android:textColor="@color/wuse"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content_llyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_user_info"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="36dp"
+                android:paddingRight="24dp"
+                android:lineSpacingExtra="4dp"
+                android:text="志愿者活动，素质拓展,志愿者活动，素质拓展,素质拓展,素质拓展,素质拓展,"
+                android:textColor="@color/wuse"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_pic_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    <View
+        android:layout_below="@+id/content_llyt"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="1dp"
+        android:background="#F4F3F8" />
+
+
+</RelativeLayout>

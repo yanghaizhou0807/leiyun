@@ -58,8 +58,18 @@
     </LinearLayout>
 
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/add_rv"
+        android:visibility="visible"
+        android:layout_below="@+id/title_llyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
     <ImageView
         android:id="@+id/iv_address"
+        android:visibility="gone"
         android:layout_below="@+id/title_llyt"
         android:layout_marginTop="50dp"
         android:layout_width="wrap_content"

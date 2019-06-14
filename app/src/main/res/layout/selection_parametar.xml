@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/touming"
     android:orientation="vertical">
 
@@ -58,7 +59,161 @@
 
 
         </RelativeLayout>
-        <TextView
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+        <!--one-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/attribute_tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:textSize="10sp"
+                android:textColor="@color/wuse"
+                android:text=""
+                />
+            <GridView
+                android:id="@+id/attribute_gv_1"
+                android:layout_width="match_parent"
+                android:numColumns="3"
+                android:verticalSpacing="8dp"
+                android:paddingTop="12dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <!--two-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/attribute_tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/wuse"
+                android:text=""
+                />
+            <GridView
+                android:id="@+id/attribute_gv_2"
+                android:layout_width="match_parent"
+                android:verticalSpacing="8dp"
+                android:numColumns="3"
+                android:paddingTop="10dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <!--three-->
+        <LinearLayout
+            android:id="@+id/gv_llyt_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/attribute_tv_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/wuse"
+                android:text=""
+                />
+            <GridView
+                android:id="@+id/attribute_gv_3"
+                android:layout_width="match_parent"
+                android:verticalSpacing="8dp"
+                android:numColumns="3"
+                android:paddingTop="10dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <!--four-->
+        <LinearLayout
+            android:id="@+id/gv_llyt_4"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/attribute_tv_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/wuse"
+                android:text=""
+                />
+            <GridView
+                android:id="@+id/attribute_gv_4"
+                android:layout_width="match_parent"
+                android:verticalSpacing="8dp"
+                android:numColumns="3"
+                android:paddingTop="10dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <!--five-->
+        <LinearLayout
+            android:id="@+id/gv_llyt_5"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/attribute_tv_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/wuse"
+                android:text=""
+                />
+            <GridView
+                android:id="@+id/attribute_gv_5"
+                android:layout_width="match_parent"
+                android:verticalSpacing="8dp"
+                android:numColumns="3"
+                android:paddingTop="10dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+       <!-- <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="颜色分类"
@@ -74,39 +229,43 @@
             android:layout_marginTop="15dp"
             android:orientation="vertical">
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="76dp"
+                    android:id="@+id/color_one_tv"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:id="@+id/color_two_tv"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:layout_marginRight="12dp"
                     android:layout_marginLeft="12dp"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
 
             </LinearLayout>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -114,28 +273,27 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:layout_marginRight="12dp"
                     android:layout_marginLeft="12dp"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
@@ -145,9 +303,10 @@
         </LinearLayout>
 
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="颜色分类"
+            android:text="尺寸分类"
             android:textSize="12sp"
             android:textColor="@color/wuse"
             android:layout_marginTop="20dp"
@@ -160,39 +319,43 @@
             android:layout_marginTop="15dp"
             android:orientation="vertical">
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="76dp"
+                    android:id="@+id/size_one_tv"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:id="@+id/size_two_tv"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:layout_marginRight="12dp"
                     android:layout_marginLeft="12dp"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
 
             </LinearLayout>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -200,35 +363,38 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:layout_marginRight="12dp"
                     android:layout_marginLeft="12dp"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
                 <TextView
-                    android:layout_width="76dp"
+                    android:layout_width="93dp"
                     android:layout_height="21dp"
                     android:textColor="@color/wuse"
-                    android:text="衣服整洁(20)"
+
                     android:textSize="11sp"
                     android:gravity="center"
                     android:background="@drawable/yansefenlei_fill"/>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </LinearLayout>-->
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -254,29 +420,22 @@
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="21dp"
-                    android:layout_height="21dp"
-                    android:text="-"
-                    android:background="@drawable/addition_and_subtraction"/>
-                <TextView
-                    android:layout_width="41dp"
-                    android:layout_height="21dp"
-                    android:layout_marginLeft="-1dp"
-                    android:layout_marginRight="-1dp"
-                    android:text="5"
-                    android:gravity="center"
-                    android:background="@drawable/addition_and_subtraction"/>
-                <Button
-                    android:layout_width="21dp"
-                    android:layout_height="21dp"
-                    android:text="+"
-                    android:background="@drawable/addition_and_subtraction"/>
+                <com.example.admin.leiyun_ic.Details.AmountView
+                    android:id="@+id/amount_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    app:btnTextSize="14sp"
+                    app:btnWidth="36dp"
+                    app:tvWidth="50dp"/>
             </LinearLayout>
 
         </RelativeLayout>
 
         <Button
+            android:id="@+id/btn_shopping_cart_rbAttribute_submit"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"

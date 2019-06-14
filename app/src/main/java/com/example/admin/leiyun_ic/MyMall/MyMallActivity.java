@@ -6,17 +6,24 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.admin.leiyun_ic.Base.BaseActivity;
+import com.example.admin.leiyun_ic.Base.BaseApplication;
 import com.example.admin.leiyun_ic.Base.BaseUrl;
 import com.example.admin.leiyun_ic.Bean.HomeRecycleViewBean;
 import com.example.admin.leiyun_ic.Bean.NewHomeRecycleViewBean;
+import com.example.admin.leiyun_ic.Bean.OrderStatusNumBean;
+import com.example.admin.leiyun_ic.Bean.UserLoginBean;
+import com.example.admin.leiyun_ic.Bean.UserPersonalInfoBean;
 import com.example.admin.leiyun_ic.Details.ModifyAddressActivity;
 import com.example.admin.leiyun_ic.HomePage.HomePageActivity;
 import com.example.admin.leiyun_ic.HomePage.IntegralSuperiorityActivity;
@@ -24,6 +31,7 @@ import com.example.admin.leiyun_ic.LoginActivity;
 import com.example.admin.leiyun_ic.R;
 import com.example.admin.leiyun_ic.adapter.HomervAdapter;
 import com.example.admin.leiyun_ic.utils.GsonQuick;
+import com.example.admin.leiyun_ic.views.CircleImageView;
 import com.heigo.http.okhttp.OkHttpUtils;
 import com.heigo.http.okhttp.builder.GetBuilder;
 import com.heigo.http.okhttp.callback.StringCallback;
@@ -41,16 +49,33 @@ public class MyMallActivity extends BaseActivity implements View.OnClickListener
     private List<NewHomeRecycleViewBean.DataBean.ListBean> list;
     private ArrayList<NewHomeRecycleViewBean.DataBean.ListBean> allList;
     private NewHomeRecycleViewBean homeRecycleViewBean;
+    private OrderStatusNumBean orderStatusNumBean;
     private HomervAdapter adapter;
     private TextView allOrders;
     private ImageView set_up_iv,msg_iv;
     private LinearLayout pending_payment_iv,to_be_shipped_iv,goods_to_be_received_iv,to_be_evaluated,after_sale_refund;
+    private TextView pending_payment_tv,to_be_shipped_tv,goods_to_be_received_tv,to_be_evaluated_tv,after_sale_refund_tv;
     private LinearLayout address,integral,footprint,arrival_notice,my_invoice,my_family_number,feedback,serve_for_help;
     private LinearLayout balance,available_integral,coupon_llyt;
+    private UserLoginBean userLoginBean;
+    private String nickname,deviceid,usertoken;
+    private UserPersonalInfoBean userPersonalInfoBean;
+    private TextView tv_user_name,tv_company_name,tv_vip_time,balance_tv;
+    private CircleImageView iv_user_icon;
+    private String url = "http://api.weboo.top";
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mymall_acty);
+        userLoginBean = BaseApplication.getInstance().getUserVO();
+        if (!"".equals(userLoginBean) && null != userLoginBean) {
+            nickname = userLoginBean.getData().getNickname();
+            Logger.e("nickname--->>:" + nickname);
+            deviceid = userLoginBean.getData().getDevice_id();
+            Logger.e("response-22-deviceid--->>:" + deviceid);
+            usertoken = userLoginBean.getData().getUser_token();
+            Logger.e("response-22-usertoken--->>:" + usertoken);
+        }
         initView();
         rv = (RecyclerView) findViewById(R.id.rv);
         rv.setNestedScrollingEnabled(false);
@@ -61,6 +86,17 @@ public class MyMallActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void initView() {
+
+        tv_user_name = (TextView)findViewById(R.id.tv_user_name);
+        tv_user_name.setOnClickListener(this);
+        tv_company_name = (TextView)findViewById(R.id.tv_company_name);
+        tv_company_name.setOnClickListener(this);
+        tv_vip_time = (TextView)findViewById(R.id.tv_vip_time);
+        tv_vip_time.setOnClickListener(this);
+        balance_tv = (TextView)findViewById(R.id.balance_tv);
+        balance_tv.setOnClickListener(this);
+        iv_user_icon = (CircleImageView)findViewById(R.id.iv_user_icon);
+        iv_user_icon.setOnClickListener(this);
 
         balance = (LinearLayout)findViewById(R.id.balance);
         balance.setOnClickListener(this);
@@ -93,6 +129,7 @@ public class MyMallActivity extends BaseActivity implements View.OnClickListener
 
         allOrders = (TextView)findViewById(R.id.all_orders);
         allOrders.setOnClickListener(this);
+
         goods_to_be_received_iv= (LinearLayout) findViewById(R.id.goods_to_be_received_iv);
         goods_to_be_received_iv.setOnClickListener(this);
         to_be_shipped_iv= (LinearLayout)findViewById(R.id.to_be_shipped_iv);
@@ -104,11 +141,111 @@ public class MyMallActivity extends BaseActivity implements View.OnClickListener
         after_sale_refund= (LinearLayout)findViewById(R.id.after_sale_refund);
         after_sale_refund.setOnClickListener(this);
 
+        goods_to_be_received_tv= (TextView) findViewById(R.id.goods_to_be_received_tv);
+        to_be_shipped_tv= (TextView)findViewById(R.id.to_be_shipped_tv);
+        to_be_evaluated_tv= (TextView)findViewById(R.id.to_be_evaluated_tv);
+        pending_payment_tv= (TextView)findViewById(R.id.pending_payment_tv);
+        after_sale_refund_tv= (TextView)findViewById(R.id.after_sale_refund_tv);
+
         allList = new ArrayList<NewHomeRecycleViewBean.DataBean.ListBean>();
         scrollview = (ScrollView)findViewById(R.id.scrollview);
         scrollview.setOnTouchListener(new TouchListenerImpl());
 
         //HomeRecyclerViewInterface();
+        UserPersonalInfo();
+        OrderStatusQuantity();
+
+    }
+
+    private void OrderStatusQuantity() {
+        GetBuilder builders = OkHttpUtils.get();
+        builders.addParams("device_id",deviceid);
+        builders.addParams("user_token",usertoken);
+        Logger.d("response-22-device_id>>:" + deviceid+"--user_token->>"+usertoken);
+        builders.url(BaseUrl.orderNumUrl).build().execute(new StringCallback() {
+            @Override
+            public void onError(Call call, Exception e, int i) {
+
+            }
+
+            @Override
+            public void onResponse(String s, int i) {
+                Logger.d("response-22-订单状态数量>>:" + s);
+                if (!"".equals(s)) {
+                    orderStatusNumBean = GsonQuick.toObject(s, OrderStatusNumBean.class);
+                    if(200==orderStatusNumBean.getCode()){
+                        if(0<orderStatusNumBean.getData().getOrder_new()){
+                            pending_payment_tv.setVisibility(View.VISIBLE);
+                            pending_payment_tv.setText(String.valueOf(orderStatusNumBean.getData().getOrder_new()));
+                        }else{
+                            pending_payment_tv.setVisibility(View.INVISIBLE);
+                        }
+
+                        if(0<orderStatusNumBean.getData().getOrder_pay()){
+                            to_be_shipped_tv.setVisibility(View.VISIBLE);
+                            to_be_shipped_tv.setText(String.valueOf(orderStatusNumBean.getData().getOrder_pay()));
+                        }else{
+                            to_be_shipped_tv.setVisibility(View.INVISIBLE);
+                        }
+
+                        if(0<orderStatusNumBean.getData().getOrder_recive()){
+                            goods_to_be_received_tv.setVisibility(View.VISIBLE);
+                            goods_to_be_received_tv.setText(String.valueOf(orderStatusNumBean.getData().getOrder_recive()));
+                        }else{
+                            goods_to_be_received_tv.setVisibility(View.INVISIBLE);
+                        }
+
+                        if(0<orderStatusNumBean.getData().getOrder_noeval()){
+                            to_be_evaluated_tv.setVisibility(View.VISIBLE);
+                            to_be_evaluated_tv.setText(String.valueOf(orderStatusNumBean.getData().getOrder_noeval()));
+                        }else{
+                            to_be_evaluated_tv.setVisibility(View.INVISIBLE);
+                        }
+
+                        if(0<orderStatusNumBean.getData().getOrder_refund()){
+                            after_sale_refund_tv.setVisibility(View.VISIBLE);
+                            after_sale_refund_tv.setText(String.valueOf(orderStatusNumBean.getData().getOrder_refund()));
+                        }else{
+                            after_sale_refund_tv.setVisibility(View.INVISIBLE);
+                        }
+
+                    }
+                }
+
+            }
+        });
+
+    }
+
+    private void UserPersonalInfo() {
+        GetBuilder builders = OkHttpUtils.get();
+        builders.addParams("device_id",deviceid);
+        builders.addParams("user_token",usertoken);
+        Logger.d("response-22-device_id>>:" + deviceid+"--user_token->>"+usertoken);
+        builders.url(BaseUrl.UserPersonalUrl).build().execute(new StringCallback() {
+            @Override
+            public void onError(Call call, Exception e, int i) {
+
+            }
+
+            @Override
+            public void onResponse(String s, int i) {
+                Logger.d("response-22-用户个人信息>>:" + s);
+                if (!"".equals(s)) {
+                    userPersonalInfoBean = GsonQuick.toObject(s, UserPersonalInfoBean.class);
+                    if("请求成功".equals(userPersonalInfoBean.getMsg())){
+                        //tv_user_name,tv_company_name,tv_vip_time,balance_tv;
+                        tv_user_name.setText(userPersonalInfoBean.getData().getMember_truename());
+                        tv_company_name.setText(userPersonalInfoBean.getData().getCompany_name());
+                        tv_vip_time.setText("会员等级"+userPersonalInfoBean.getData().getInvite_two());
+                        balance_tv.setText(userPersonalInfoBean.getData().getAvailable_rc_balance());
+                        //iv_user_icon
+                        Glide.with(context).load(url+userPersonalInfoBean.getData().getMember_avatar()).into(iv_user_icon);
+                    }
+                }
+
+            }
+        });
 
     }
 
@@ -259,5 +396,21 @@ public class MyMallActivity extends BaseActivity implements View.OnClickListener
                 }
             }
         });
+    }
+
+    private long exitTime = 0;
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

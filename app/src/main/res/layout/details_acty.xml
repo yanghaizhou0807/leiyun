@@ -28,10 +28,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="375dp"
                     android:background="@mipmap/aa" />
+
                 <!--<ImageView
+                    android:id="@+id/viewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/one"/>-->
+                    android:layout_height="375dp"
+                    android:background="@mipmap/aa"
+                    />-->
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -45,7 +48,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="22dp"
-                        android:lines="2"
+
                         android:text="小镇珊珊听风的歌春夏2019新款女吊带连衣裙法国复古裙子潮汕女裙"
                         android:textColor="#000000"
                         android:textSize="14sp" />
@@ -60,13 +63,15 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/market_value_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="￥329.00"
+
                             android:textColor="@color/yelllows"
                             android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/discount_rate_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -84,29 +89,31 @@
                         android:layout_below="@+id/jiagezhekou"
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="2dp"
-                        android:layout_marginRight="22dp">
+                        android:layout_marginRight="12dp">
 
                         <TextView
+                            android:id="@+id/primary_price_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="￥3033.00"
-                            android:textColor="@color/yelllows"
+
+                            android:textColor="@color/ninenine"
                             android:textSize="11sp" />
 
                         <ImageView
                             android:layout_width="40dp"
-                            android:layout_height="1dp"
-                            android:layout_marginLeft="7dp"
-                            android:layout_marginTop="7dp"
-                            android:background="@color/white" />
+                            android:layout_height="0.5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/ninenine" />
 
                         <TextView
+                            android:id="@+id/sale_num_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="260dp"
+                            android:layout_alignParentRight="true"
                             android:gravity="center"
-                            android:text="销量  324"
+
                             android:textColor="#999999"
                             android:textSize="11sp" />
 
@@ -121,7 +128,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="102dp"
+                    android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:orientation="vertical">
 
@@ -241,10 +248,11 @@
                         android:layout_gravity="center"/>
 
                     <TextView
+                        android:id="@+id/color_tv"
                         android:layout_width="65dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
-                        android:text="颜色分类"
+
                         android:textSize="12sp"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -252,10 +260,11 @@
                         />
 
                     <TextView
+                        android:id="@+id/size_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="6dp"
-                        android:text="尺寸分类"
+
                         android:textSize="12sp"
                         android:textColor="@color/wuse"
                         android:gravity="center"
@@ -354,28 +363,31 @@
                         android:gravity="center"
                         android:orientation="horizontal">
                         <TextView
+                            android:id="@+id/all_evaluations_tv"
                             android:layout_width="76dp"
                             android:layout_height="21dp"
                             android:textColor="@color/wuse"
-                            android:text="衣服整洁(20)"
+
                             android:textSize="11sp"
                             android:gravity="center"
                             android:background="@drawable/pingjia_fill"/>
                         <TextView
+                            android:id="@+id/new_evaluations_tv"
                             android:layout_width="76dp"
                             android:layout_height="21dp"
                             android:textColor="@color/wuse"
-                            android:text="衣服整洁(20)"
+
                             android:layout_marginRight="12dp"
                             android:layout_marginLeft="12dp"
                             android:textSize="11sp"
                             android:gravity="center"
                             android:background="@drawable/pingjia_fill"/>
                         <TextView
+                            android:id="@+id/good_evaluations_tv"
                             android:layout_width="76dp"
                             android:layout_height="21dp"
                             android:textColor="@color/wuse"
-                            android:text="衣服整洁(20)"
+
                             android:textSize="11sp"
                             android:gravity="center"
                             android:background="@drawable/pingjia_fill"/>
@@ -389,28 +401,31 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/middle_evaluations_tv"
                             android:layout_width="76dp"
                             android:layout_height="21dp"
                             android:textColor="@color/wuse"
-                            android:text="衣服整洁(20)"
+
                             android:textSize="11sp"
                             android:gravity="center"
                             android:background="@drawable/pingjia_fill"/>
                         <TextView
+                            android:id="@+id/pic_evaluations_tv"
                             android:layout_width="76dp"
                             android:layout_height="21dp"
                             android:textColor="@color/wuse"
-                            android:text="衣服整洁(20)"
+
                             android:layout_marginRight="12dp"
                             android:layout_marginLeft="12dp"
                             android:textSize="11sp"
                             android:gravity="center"
                             android:background="@drawable/pingjia_fill"/>
                         <TextView
+                            android:id="@+id/add_evaluations_tv"
                             android:layout_width="76dp"
                             android:layout_height="21dp"
                             android:textColor="@color/wuse"
-                            android:text="衣服整洁(20)"
+
                             android:textSize="11sp"
                             android:gravity="center"
                             android:background="@drawable/pingjia_fill"/>
@@ -428,7 +443,7 @@
                     android:background="@color/white">
 
                     <com.example.admin.leiyun_ic.views.CircleImageView
-                        android:id="@+id/iv_user_icon"
+                        android:id="@+id/iv_user_icon_one"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_alignParentLeft="true"
@@ -437,21 +452,22 @@
                         android:src="@mipmap/tou_xiang_s" />
 
                     <TextView
-                        android:id="@+id/tv_user_name"
+                        android:id="@+id/tv_user_name_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="6dp"
-                        android:layout_alignTop="@+id/iv_user_icon"
+                        android:layout_alignTop="@+id/iv_user_icon_one"
                         android:layout_marginTop="5dp"
-                        android:layout_toRightOf="@+id/iv_user_icon"
-                        android:text="迪丽热巴"
+                        android:layout_toRightOf="@+id/iv_user_icon_one"
+                        android:text=""
                         android:textColor="#333333"
                         android:textSize="12sp" />
 
                     <TextView
-                        android:layout_below="@+id/iv_user_icon"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/comments_tv_one"
+                        android:layout_below="@+id/iv_user_icon_one"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="11sp"
                         android:lines="2"
@@ -461,7 +477,7 @@
                         android:ellipsize="end"
                         android:textColor="@color/black"
                         android:lineSpacingExtra="5dp"
-                        android:text="非常满意这个系列！在淘宝找了一圈，还是选择这家的垫子，面料很厚实，颜色图案也很漂亮，尺寸正好。家人都比较满意。"/>
+                        android:text=""/>
 
                 </RelativeLayout>
 
@@ -483,7 +499,7 @@
 
 
                     <com.example.admin.leiyun_ic.views.CircleImageView
-                        android:id="@+id/iv_user_icons"
+                        android:id="@+id/iv_user_icon_two"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_alignParentLeft="true"
@@ -492,21 +508,22 @@
                         android:src="@mipmap/tou_xiang_s" />
 
                     <TextView
-                        android:id="@+id/tv_user_names"
+                        android:id="@+id/tv_user_name_two"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="6dp"
-                        android:layout_alignTop="@+id/iv_user_icons"
+                        android:layout_alignTop="@+id/iv_user_icon_two"
                         android:layout_marginTop="5dp"
-                        android:layout_toRightOf="@+id/iv_user_icons"
-                        android:text="迪丽热巴"
+                        android:layout_toRightOf="@+id/iv_user_icon_two"
+                        android:text=""
                         android:textColor="#333333"
                         android:textSize="12sp" />
 
                     <TextView
-                        android:layout_below="@+id/iv_user_icons"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/comments_tv_two"
+                        android:layout_below="@+id/iv_user_icon_two"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="11sp"
                         android:lines="2"
@@ -516,7 +533,7 @@
                         android:ellipsize="end"
                         android:textColor="@color/black"
                         android:lineSpacingExtra="5dp"
-                        android:text="非常满意这个系列！在淘宝找了一圈，还是选择这家的垫子，面料很厚实，颜色图案也很漂亮，尺寸正好。家人都比较满意。"/>
+                        android:text=""/>
 
 
                 </RelativeLayout>
@@ -529,7 +546,7 @@
             <LinearLayout
                 android:id="@+id/three"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -542,7 +559,14 @@
                     android:gravity="center"
                     />
 
-                <ImageView
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp">
+
+                </WebView>
+                <!--<ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@mipmap/bb"
@@ -562,7 +586,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/six" />
+                    android:src="@mipmap/six" />-->
 
             </LinearLayout>
 
@@ -723,7 +747,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_gravity="bottom"
-        android:background="@color/white"
+        android:background="@drawable/gary_box_bg"
         android:orientation="horizontal">
 
         <!--店铺-->

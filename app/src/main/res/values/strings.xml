@@ -5,4 +5,8 @@
     <string name="input_telephone_strg">请输入手机号!</string>
     <string name="input_pwd_strg">请输入密码!</string>
     <string name="pwd_descri_strg">密码由6-20位英文字母或数字组成</string>
+
+    <string name="name_not_null">姓名不能为空</string>
+    <string name="phone_not_null">电话不能为空</string>
+    <string name="detail_not_null">请填写详细地址</string>
 </resources>

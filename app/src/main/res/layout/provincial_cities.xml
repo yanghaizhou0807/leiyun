@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/touming"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="请选择地址"
+            android:textSize="14sp"
+            android:textColor="@color/wuse"/>
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/provincial"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="省"
+                android:background="@drawable/address_xhx"
+                android:textColor="@color/yelllowd"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="市"
+                android:background="@drawable/address_xhx"
+                android:textColor="@color/yelllowd"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/street"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="区/街道"
+                android:background="@drawable/address_xhx"
+                android:textColor="@color/yelllowd"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/pro_city_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

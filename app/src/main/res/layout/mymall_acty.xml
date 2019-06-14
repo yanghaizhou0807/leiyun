@@ -187,6 +187,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/balance_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="9527"
@@ -319,14 +320,29 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
+                        <RelativeLayout
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@mipmap/tobe_paid"
+                            android:layout_marginTop="8dp"
                             android:gravity="center"
                             android:textColor="@color/white"
                             android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/pending_payment_tv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:textSize="11sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:background="@mipmap/red_circle"/>
+                        </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -346,14 +362,29 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@mipmap/tobe_shipped"
+                            android:layout_marginTop="8dp"
                             android:gravity="center"
                             android:textColor="@color/white"
                             android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/to_be_shipped_tv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:textSize="11sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:background="@mipmap/red_circle"/>
+                        </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -373,15 +404,30 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
+                        <RelativeLayout
+                            android:layout_width="33dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@mipmap/tobe_received"
+                            android:layout_marginTop="8dp"
                             android:gravity="center"
                             android:text=""
                             android:textColor="@color/white"
                             android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/goods_to_be_received_tv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:textSize="11sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:background="@mipmap/red_circle"/>
+                        </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -401,15 +447,29 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:layout_width="32dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@mipmap/tobe_evaluated"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/white"
-                            android:textSize="12sp" />
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@mipmap/tobe_evaluated"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/to_be_evaluated_tv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:textSize="11sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:background="@mipmap/red_circle"/>
+                        </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -429,15 +489,30 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
+                        <RelativeLayout
+                            android:layout_width="37dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@mipmap/after_sale_refund"
+                            android:layout_marginTop="8dp"
                             android:gravity="center"
                             android:text=""
                             android:textColor="@color/white"
                             android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/after_sale_refund_tv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:textSize="11sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:background="@mipmap/red_circle"/>
+                        </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"

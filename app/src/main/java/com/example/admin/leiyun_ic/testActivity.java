@@ -32,14 +32,14 @@ public class testActivity extends Activity {
     }
 
     private void initView() {
-        buttonTest= (Button)findViewById(R.id.buttonTest);
+        /*buttonTest= (Button)findViewById(R.id.buttonTest);
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(new MessageEvent("消息类容"));
                 finish();
             }
-        });
+        });*/
     }
     /**
      * 视频文字混传

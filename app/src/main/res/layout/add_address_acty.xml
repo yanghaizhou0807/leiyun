@@ -46,6 +46,17 @@
                 android:background="@mipmap/left" />
 
             <Button
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="删除"
+                android:textColor="@color/wuse"
+                android:textSize="12sp"
+                android:background="#00000000"/>
+            <Button
+                android:visibility="gone"
                 android:id="@+id/search_btn"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -81,6 +92,7 @@
             />
 
         <EditText
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -126,6 +138,7 @@
             />
 
         <EditText
+            android:id="@+id/mob_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -161,7 +174,8 @@
             android:layout_marginLeft="15dp"
             />
 
-        <EditText
+        <TextView
+            android:id="@+id/area_info_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -173,12 +187,13 @@
             android:layout_toRightOf="@+id/name_2" />
 
         <Button
-            android:layout_width="8dp"
-            android:layout_height="15dp"
+            android:id="@+id/add_select_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:background="@mipmap/right_arrow" />
+            android:background="@mipmap/jiantou_fx" />
 
     </RelativeLayout>
     <TextView
@@ -204,6 +219,7 @@
             />
 
         <EditText
+            android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -221,112 +237,55 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#F4F3F8"/>
-    <RelativeLayout
-        android:id="@+id/nama_rlyt_4"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/nama_rlyt_2">
 
-        <TextView
-            android:layout_width="62dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:text="标签"
-            android:textSize="13sp"
-            android:textColor="#3f3f3f"
-            android:layout_marginLeft="15dp"
-            />
-
-
-
-
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="33dp"
-                android:text="家"
-                android:gravity="center"
-                android:background="@drawable/gray_bg_l"/>
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="33dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:text="学校"
-                android:gravity="center"
-                android:background="@drawable/gray_bg_l"/>
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="33dp"
-                android:text="公司"
-                android:gravity="center"
-                android:background="@drawable/gray_bg_l"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="33dp"
-                android:text="自定义"
-                android:gravity="center"
-                android:background="@drawable/gray_bg_l"/>
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="33dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:visibility="invisible"
-                android:background="@drawable/gray_bg_l"/>
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="33dp"
-                android:visibility="invisible"
-                android:background="@drawable/gray_bg_l"/>
-        </LinearLayout>
-    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="20dp"
         android:background="#F4F3F8"/>
+
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="match_parent"
         >
 
         <TextView
-            android:layout_width="62dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:text="默认设置"
             android:textSize="13sp"
             android:textColor="#3f3f3f"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
             />
 
 
-        <Button
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_marginTop="15dp"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:background="@mipmap/selection_hook" />
+            android:button="@null"
+            android:background="@drawable/address_mr"
+            android:checked="true"/>
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:id="@+id/address_btn"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/left_right_btn"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textSize="14sp"/>
 
     </RelativeLayout>
 

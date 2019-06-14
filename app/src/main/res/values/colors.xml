@@ -49,4 +49,6 @@
     <color name="text_label_color">#4a4a4a</color>
     <color name="transparent">#00000000</color><!-- 透明色 -->
 
+    <color name="divider">#ffd2d2d2</color>
+
 </resources>
